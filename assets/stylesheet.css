@@ -1298,7 +1298,6 @@ audio {
         font-weight: 700;
         color: #fff;
         background-color: #466baf;
-	z-index:99999;
 }
     .btn-primary:hover,
     .btn-primary:focus,
