@@ -1254,6 +1254,11 @@ audio {
 	top:100%;
 	opacity: 0.5;
 	z-index: 9999;
+	-webkit-animation: borderSlideUp 6s linear forwards;
+    -moz-animation: borderSlideUp 6s linear forwards;
+    -o-animation: borderSlideUp 6s linear forwards;
+    -ms-animation: borderSlideUp 6s linear forwards;
+    animation: borderSlideUp 6s linear forwards; 
 }
 .control-panel {
 	position: fixed;
@@ -1317,3 +1322,29 @@ audio {
     		-webkit-transform: scale(0.9);
     	}
     }*/
+keyframes borderSlideUp {
+    0% {
+        top: 100%; /* 起点：屏幕最下方 */
+    }
+    100% {
+        top: -200vh; /* 终点：屏幕上方很远的地方（-200倍屏幕高度），确保无论图片多高都能彻底飞出 */
+    }
+}
+
+/* 为了兼容旧浏览器，加上前缀版本 */
+@-webkit-keyframes borderSlideUp {
+    0% { top: 100%; }
+    100% { top: -200vh; }
+}
+@-moz-keyframes borderSlideUp {
+    0% { top: 100%; }
+    100% { top: -200vh; }
+}
+@-o-keyframes borderSlideUp {
+    0% { top: 100%; }
+    100% { top: -200vh; }
+}
+@-ms-keyframes borderSlideUp {
+    0% { top: 100%; }
+    100% { top: -200vh; }
+}
